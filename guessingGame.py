@@ -17,4 +17,4 @@ print("Avarege: ", sum(userInputs)/len(userInputs))
 
 print("Hello from a git session in vs code")
 
-prin("adding line after git checkoit -b")
+print("adding line after git checkoit -b")
