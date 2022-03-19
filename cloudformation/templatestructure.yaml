@@ -1,0 +1,54 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+#this is optional but it is way of future-proofing the product if
+#the format of the template changes.
+Description:
+  this template does XXXX
+#this is where you can provide a description for the template.
+#you are able to put any free-form text that you want in this component
+#of the template. If you do include it, and keep in mind it is entirely optional,
+#but if you do use it, it needs to come immediately after the AWS
+#template format version above it. This is one of a few hard rules that
+#CloudFormation has. So keep that in mind.
+Metadata:
+  template metadata
+#Metadata section is another component and it is a multi-purpose section.
+#It can be used for something simple,  like controlling how the template
+#looks when createing a stack. So if you apply a template inside the
+#AWS Management Console, you can control how that information is presented
+#to the user ot the metadata can contain information that the whole template can use.
+#So all the resources in the template are able to use that information and this is optional section.
+Parameters:
+  set of parameters
+#and this is where you can define information that you want the template to ask 
+#for. This might be the name of things, the size of instances, or the type of 
+#database to use. You could define defaults, which allow the template to continue if
+#you do not specify a value for a parameter, or for example, if it is used in automation.
+#Again paramaters are entirely optional.
+Mappings:
+  set of mappings
+#This next section here is mappings and mappings allow you to include data,
+#which can be used conditionally. An example could be that you have a parameter for
+#the environment to deploy into. So for example, dev, test, or prod, and based on that value,
+#you might decide to specify different sizes of instances to use. But again this is optional section.
+Conditions:
+  set of conditions
+#Conditions control whether certain resources are crated or whether certain resouce properties are
+#assinged based on a number of values. So for example, you could conditionally create a resource that
+#depends on whether the stack is for production or test.
+Transform:
+  set of transforms
+#Now the transform section is something that is usually used for serverless application.
+#Again, is is an optional component.
+Outputs:
+  set of outputs
+#Outputs is another optional part of the template that allows you to return values once the stack complates.
+#So if you want to produce some output --maybe the URL yo your dog pictures blog-- then you can use outputs to
+#present that to the user. And these outputs are available whether you create the stack from the
+#AWS Management Console, the command line, or using some other outomation process.
+Resources:
+  set of resources
+#Now the resources section is the last part of a CloudFormation template that I want to talk about.
+#And I left it to last because it is the only required part of any CloudFormation template.
+#Notice that this template only has the resources section. It is the only part that we need
+#to use.
